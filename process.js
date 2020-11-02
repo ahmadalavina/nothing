@@ -1,5 +1,10 @@
 const fs = require("fs")
 const yargs = require('yargs')
+const chalk =require('chalk')
+const {addcontacts} =require('./conacts1')
+
+
+
 //  var ahmad ="ahmad"
 // console.log(process.argv)
 
@@ -23,7 +28,9 @@ yargs.command({
     },
 
     handler({ fullname, phone, email }) {
-        console.log(fullname, phone, email)
+        // console.log(fullname, phone, email)
+
+        addcontacts(fullname,phone,email)
     },
 })
 yargs.parse()
